@@ -9,7 +9,7 @@ public class ElizaApp {
 		
 		Interaction ic = new Interaction();
 
-ic.UserResponse("Hello");
+ic.UserResponse("hi");
 		
 	}
 }

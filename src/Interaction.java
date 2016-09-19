@@ -48,7 +48,7 @@ public class Interaction {
 	public  String Replace( String answer) {
 		String response=" ";
 		String ans="";
-		String [] word= answer.split("-");
+		String [] word= answer.split(" ");
 		for (int i=0; i<word.length;i++ ){
 				for(String value: rm.keySet()){
 					if(word[i].equalsIgnoreCase(value)) {
@@ -66,29 +66,29 @@ public class Interaction {
 	
   public String UserResponse(String x) {
 	  String res="";
-	  boolean response=false;
-	  System.out.println("Hello");
+	//boolean response=false;
+	  System.out.println("Hello,How may I help you");
 	  Scanner scan= new Scanner(System.in);
-	  String answer = scan.next();
-	 if  (!answer.equalsIgnoreCase("q")){
-		response =true;
+	  String answer = scan.nextLine();
+	 if  (!answer.equalsIgnoreCase("quit")){
+		//sponse =true;
 	 
-	 while(response){
+	 while(!answer.equalsIgnoreCase("quit")){
 			Random rn = new Random();
 			int index = 1+ rn.nextInt(2);
 			if(index==1){
-	  res=Replace(answer);
-	  System.out.println(Intro(qf)+res);
+				res=Replace(answer);
+				System.out.println(Intro(qf)+res);
 			}
 			else {
 				System.out.println(Intro(HedgeSet));
 			}
-	  answer = scan.next();
+	  answer = scan.nextLine();
 	 }
 	 
 	 }
 	 else {
-		 
+		 	
 			 System.out.println("Bye Bye");
 	 }
 	 
