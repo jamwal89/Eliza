@@ -66,14 +66,14 @@ public class Interaction {
 	
   public String UserResponse(String x) {
 	  String res="";
-	//boolean response=false;
+
 	  System.out.println("Hello,How may I help you");
 	  Scanner scan= new Scanner(System.in);
 	  String answer = scan.nextLine();
-	 if  (!answer.equalsIgnoreCase("quit")){
-		//sponse =true;
+	 while  (!answer.equalsIgnoreCase("quit")){
+	
 	 
-	 while(!answer.equalsIgnoreCase("quit")){
+	 
 			Random rn = new Random();
 			int index = 1+ rn.nextInt(2);
 			if(index==1){
@@ -86,8 +86,8 @@ public class Interaction {
 	  answer = scan.nextLine();
 	 }
 	 
-	 }
-	 else {
+	 
+	  if (answer.equalsIgnoreCase("quit")){
 		 	
 			 System.out.println("Bye Bye");
 	 }
