@@ -3,6 +3,8 @@ import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class Interaction {
 
@@ -15,14 +17,14 @@ public class Interaction {
 	public Interaction() {
 
 
-		HedgeSet= new HashMap<Integer,String>();
+		//HedgeSet= new HashMap<Integer,String>();
 		rm = new HashMap<String,String>();
-		qf = new HashMap<Integer,String>();
+		//qf = new HashMap<Integer,String>();
 
 
-		HedgeSet.put(1, "Please tell me more");
-		HedgeSet.put(2, "Many of my patients tell me the same thing");
-		HedgeSet.put(3,"It is getting late, maybe we better quit");
+//		HedgeSet.put(1, "Please tell me more");
+//		HedgeSet.put(2, "Many of my patients tell me the same thing");
+//		HedgeSet.put(3,"It is getting late, maybe we better quit");
 
 		rm.put("i", "you");
 		rm.put("am", "are");
@@ -30,9 +32,9 @@ public class Interaction {
 		rm.put("me","you");
 
 
-		qf.put(1,"Why do you say that");
-		qf.put(2, "you seem to think that");
-		qf.put(3, "your concern is ");
+//		qf.put(1,"Why do you say that");
+//		qf.put(2, "you seem to think that");
+//		qf.put(3, "your concern is ");
 
 
 	}
